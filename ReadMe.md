@@ -29,7 +29,9 @@ Backspacing at the start of a line: When the user backspaces at the beginning of
 
 - Non printable characters: fix the issue when runining hello and pass itself as the argument, hard to move the cursor arround. Every keypress causes the terminal to ding, because the audible bell character (7) is being printed out.Strings containing terminal escape sequences in the code are being printed out as actual escape sequences, because that’s how they’re stored in a raw executable.
         
-	-To prevent all that: translate nonprintable chars into printable ones:
-        - Render the alphabetic control chars: (Ctrl-A = 1, Ctrl-B = 2, …, Ctrl-Z = 26) as the capital letters A through Z. The 0 byte like a control character. Ctrl-@ = 0, render it as an @ sign. Any other nonprintable characters we’ll render as a question mark (?). To differentiate these chars from their printable conterparts, use only black and white color
-        - can test it out by pressing Ctrl-A, Ctrl-b and so on to insert those control characters into strings or comments, thye get the same color as the surrounding characters, just inverted
+	- To prevent all that: translate nonprintable chars into printable ones:
+        
+	- Render the alphabetic control chars: (Ctrl-A = 1, Ctrl-B = 2, …, Ctrl-Z = 26) as the capital letters A through Z. The 0 byte like a control character. Ctrl-@ = 0, render it as an @ sign. Any other nonprintable characters we’ll render as a question mark (?). To differentiate these chars from their printable conterparts, use only black and white color
+        
+	- can test it out by pressing Ctrl-A, Ctrl-b and so on to insert those control characters into strings or comments, thye get the same color as the surrounding characters, just inverted
 
