@@ -27,3 +27,5 @@ Backspacing at the start of a line: When the user backspaces at the beginning of
         To prevent all that: translate nonprintable chars into printable ones
         - Render the alphabetic control chars: (Ctrl-A = 1, Ctrl-B = 2, …, Ctrl-Z = 26) as the capital letters A through Z. The 0 byte like a control character. Ctrl-@ = 0, render it as an @ sign. Any other nonprintable characters we’ll render as a question mark (?). To differentiate these chars from their printable conterparts, use only black and white color
         - can test it out by pressing Ctrl-A, Ctrl-b and so on to insert those control characters into strings or comments, thye get the same color as the surrounding characters, just inverted
+
+- This is a test
