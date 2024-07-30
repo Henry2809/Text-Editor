@@ -11,8 +11,10 @@ Backspacing at the start of a line: When the user backspaces at the beginning of
 - when the user runs ./hello with (no arguments), they willl get a blank file to edit. 
         
 	- Press CTRL-S to save with the file name. Press Enter key to write it to disk then CTRL-Q to quit
-        - else if the user press CTRL-S to save but without specified the name, ESC to cancel and then CTRL-Q 3 times to quit
-        - the user can also press Backspace (or Ctrl-H, or Delete) in the input prompt 
+        
+	- else if the user press CTRL-S to save but without specified the name, ESC to cancel and then CTRL-Q 3 times to quit
+        
+	- the user can also press Backspace (or Ctrl-H, or Delete) in the input prompt 
 
 - CTRL_F to use search feature. Will support (incremental search), meaning the file is searched after each keypress when the user is typing in their search query
 - Search forward and backward: allow the user to advance to the next or previous match in the file using the arrow keys. The ↑ and ← keys will go to the previous match, and the ↓ and → keys will go to the next match.
@@ -26,9 +28,8 @@ Backspacing at the start of a line: When the user backspaces at the beginning of
 - common types name are green, actual keywords are yellow
 
 - Non printable characters: fix the issue when runining hello and pass itself as the argument, hard to move the cursor arround. Every keypress causes the terminal to ding, because the audible bell character (7) is being printed out.Strings containing terminal escape sequences in the code are being printed out as actual escape sequences, because that’s how they’re stored in a raw executable.
-        To prevent all that: translate nonprintable chars into printable ones:
         
-	- Render the alphabetic control chars: (Ctrl-A = 1, Ctrl-B = 2, …, Ctrl-Z = 26) as the capital letters A through Z. The 0 byte like a control character. Ctrl-@ = 0, render it as an @ sign. Any other nonprintable characters we’ll render as a question mark (?). To differentiate these chars from their printable conterparts, use only black and white color
-        
-	- can test it out by pressing Ctrl-A, Ctrl-b and so on to insert those control characters into strings or comments, thye get the same color as the surrounding characters, just inverted
+	To prevent all that: translate nonprintable chars into printable ones:
+        - Render the alphabetic control chars: (Ctrl-A = 1, Ctrl-B = 2, …, Ctrl-Z = 26) as the capital letters A through Z. The 0 byte like a control character. Ctrl-@ = 0, render it as an @ sign. Any other nonprintable characters we’ll render as a question mark (?). To differentiate these chars from their printable conterparts, use only black and white color
+        - can test it out by pressing Ctrl-A, Ctrl-b and so on to insert those control characters into strings or comments, thye get the same color as the surrounding characters, just inverted
 
